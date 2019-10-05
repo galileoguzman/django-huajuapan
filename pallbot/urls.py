@@ -10,10 +10,7 @@ urlpatterns = [
     # Django administration site
     path('admin/', admin.site.urls),
     # Index template
-    path('', TemplateView.as_view(
-    	template_name='pages/landing.html'),
-    	name='index'
-    ),
+    path('', TemplateView.as_view(template_name='pages/landing.html'), name='index'),
 ]
 
 urlpatterns += static(settings.STATIC_URL,
